@@ -28,7 +28,7 @@
             <productlist_setup>
                 <setup>
                     <module>Ecommistry_ProductList</module>
-                    <class>Mage_Core_Model_Resource_Setup</class>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>
