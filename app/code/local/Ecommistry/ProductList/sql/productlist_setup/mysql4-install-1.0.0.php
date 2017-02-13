@@ -7,7 +7,7 @@ $installer->addAttribute('catalog_product', 'handle_display', array(
     'label'             => 'Handle Display',
     'input' 			=> 'boolean',
 	'type' 				=> 'int',
-    'backend'           => 'eav/entity_attribute_backend_int',
+    'backend'           => '',
     'frontend'          => '',
     'visible'           => true,
     'required'          => false,

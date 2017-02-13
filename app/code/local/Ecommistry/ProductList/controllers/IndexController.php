@@ -4,7 +4,7 @@ class Ecommistry_ProductList_IndexController extends Mage_Core_Controller_Front_
     public function indexAction()
     {
     	if(!Mage::getSingleton('customer/session')->isLoggedIn()){
-	        $this->_redirect('*/*/');
+	        $this->_redirect('/');
 	    }else{
 	        $collection = Mage::getModel('catalog/product')->getCollection();
 			$collection->addAttributeToSelect('sku');
