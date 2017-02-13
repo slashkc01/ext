@@ -7,4 +7,4 @@ A stand alone extension that displays chosen products in a new customer frontend
 3. Add a new item link into the My Account menu connected to produclist module.
 4. Displays product list with the handle_display attribute set to Yes.
 
-NOTE: append ?mode=slider on "produclist/index/?mode=slider" it will enable the product slider
+NOTE: append ?mode=slider on "productlist/index/?mode=slider" or "productlist/index/index/mode/slider/" it will enable the product slider
