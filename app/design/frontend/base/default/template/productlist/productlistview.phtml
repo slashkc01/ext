@@ -1,7 +1,7 @@
 <?php
-$slidermode = $this->getProductlist('slidermode');
-
-if($slidermode == 'slider'){    
+if (count($this->getProductlist('products')) > 0) {
+    $slidermode = $this->getProductlist('slidermode');
+    if($slidermode == 'slider'){    
 ?>
 
 <!DOCTYPE html>
@@ -118,9 +118,8 @@ if($slidermode == 'slider'){
             <div style="position:absolute;display:block;background:url('/media/productlist/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
-            <?php
-            if (count($this->getProductlist('products')) > 0) {                
-                foreach ($this->getProductlist('products') as $value) {
+            <?php            
+            foreach ($this->getProductlist('products') as $value) {
             ?>
             <div>
                 <img data-u="image" src="/media/productlist/red.jpg" />
@@ -128,7 +127,6 @@ if($slidermode == 'slider'){
                 <div style="position:absolute;top:300px;left:30px;width:480px;height:120px;z-index:0;font-size:30px;color:#ffffff;line-height:38px;"><?php echo $this->__($value); ?> Description etc...</div>
             </div>
             <?php
-                }
             }
             ?>
 
@@ -146,10 +144,13 @@ if($slidermode == 'slider'){
 </body>
 </html>
 <?php
-}else{
-    if (count($this->getProductlist('products')) > 0) {                
-        foreach ($this->getProductlist('products') as $value) {
-            echo $this->__($value)."<br>";
+    }else{
+        if (count($this->getProductlist('products')) > 0) {                
+            foreach ($this->getProductlist('products') as $value) {
+                echo $this->__($value)."<br>";
+            }
         }
     }
+}else{
+    echo 'No Products Was Set To Handle_Display Yes';
 }
