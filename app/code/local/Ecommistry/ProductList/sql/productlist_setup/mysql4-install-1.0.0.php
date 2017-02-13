@@ -8,7 +8,7 @@ if (null!==$attr->getId()) {
     $installer->startSetup();
 
     $installer->addAttribute('catalog_product', 'handle_display', array(
-        'group'             => 'Default',
+        'group'             => 'Handle Display',
         'label'             => 'Handle Display',
         'input' 			=> 'boolean',
     	'type' 				=> 'int',
@@ -27,4 +27,5 @@ if (null!==$attr->getId()) {
     ));
 
     $installer->endSetup();
+
 }
