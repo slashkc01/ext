@@ -11,9 +11,17 @@ class Ecommistry_ProductList_IndexController extends Mage_Core_Controller_Front_
 			
 			$collection->addFieldToFilter( 'handle_display', array('eq'=>1));
 
+			$productListCollection = array();
 			foreach ($collection as $product) {			    
-			    var_dump($product->getData());
+			    $productListCollection['products'][] = $product->getData('sku');
 			}
+
+			$productListCollection['slidermode'] = $this->getRequest()->getParam('mode');	
+					
+			$block = $this->getLayout()->createBlock('core/template');
+	        $block->setTemplate('productlist/productlistview.phtml');
+	        $block->setProductlist($productListCollection);	        
+	        echo $block->toHtml();
 	    }
 		
     } 
