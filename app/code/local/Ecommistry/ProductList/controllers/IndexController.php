@@ -7,9 +7,9 @@ class Ecommistry_ProductList_IndexController extends Mage_Core_Controller_Front_
 	        $this->_redirect('/');
 	    }else{
 	        $collection = Mage::getModel('catalog/product')->getCollection();
-			$collection->addAttributeToSelect('sku');
-			
+			$collection->addAttributeToSelect('sku');			
 			$collection->addFieldToFilter( 'handle_display', array('eq'=>1));
+			$collection->getSelect()->limit(10);
 
 			$productListCollection = array();
 			foreach ($collection as $product) {			    
