@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+		<Ecommistry_ProductList>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ecommistry_ProductList>		
+    </modules>
+</config> 

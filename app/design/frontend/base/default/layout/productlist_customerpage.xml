@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink">
+                <name>productlist_section</name>
+                <path>productlist/index/index</path>
+                <label>Ecommistry ProductList</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <productlist_customerpage_index_index>
+        <update handle="customer_account" />
+        <reference name="my.account.wrapper">
+            <block type="core/template" name="productlist_customerpage_content" template="productlist_customerpage.phtml"/>            
+        </reference>
+    </productlist_customerpage_index_index>
+
+</layout>

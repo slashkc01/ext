@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Ecommistry_ProductList>
+            <version>1.0.0</version>
+        </Ecommistry_ProductList>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <productlist module="Ecommistry_ProductList">
+                    <file>productlist_customerpage.xml</file>
+                </productlist>
+            </updates>
+        </layout>
+        <routers>
+            <productlist>
+                <use>standard</use>
+                <args>
+                    <module>Ecommistry_ProductList</module>
+                    <frontName>productlist</frontName>
+                </args>
+            </productlist>            
+        </routers>         
+    </frontend>
+    <global>    	  
+        <resources>
+            <productlist_setup>
+                <setup>
+                    <module>Ecommistry_ProductList</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </productlist_setup>            
+        </resources>
+  	</global>
+</config>
