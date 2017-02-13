@@ -19,11 +19,15 @@ class Ecommistry_ProductList_IndexController extends Mage_Core_Controller_Front_
 				}
 
 				$productListCollection['slidermode'] = $this->getRequest()->getParam('mode');	
-						
+				/*		
 				$block = $this->getLayout()->createBlock('core/template');
 		        $block->setTemplate('productlist/productlistview.phtml');
 		        $block->setProductlist($productListCollection);	        
 		        echo $block->toHtml();
+				*/
+				Mage::register('productlist', $productListCollection);
+				$this->loadLayout();
+		        $this->renderLayout();
 	    	}else{
 	    		/*	if productlist_setup was present in core_resource and handle_display was not found in eav_attribute
 					we are deleting the productlist_setup in core_resource to reinstall the module

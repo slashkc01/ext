@@ -10,11 +10,11 @@
         </reference>
     </customer_account>
 
-    <productlist_customerpage_index_index>
+    <productlist_index_index>
         <update handle="customer_account" />
         <reference name="my.account.wrapper">
-            <block type="core/template" name="productlist_customerpage_content" template="productlist_customerpage.phtml"/>            
+            <block type="core/template" name="productlist_content" template="productlist_customerpage.phtml"/>            
         </reference>
-    </productlist_customerpage_index_index>
+    </productlist_index_index>
 
 </layout>
